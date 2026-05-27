@@ -21,6 +21,9 @@
 
 [![asciicast](https://asciinema.org/a/eaj2OzUrrQLOZejh.svg)](https://asciinema.org/a/eaj2OzUrrQLOZejh)
 
+### brain-gcd
+[![asciicast](https://asciinema.org/a/yxwaxIzC1fskC9CW.svg)](https://asciinema.org/a/yxwaxIzC1fskC9CW)
+
 #### Установка и запуск
 
 ```bash

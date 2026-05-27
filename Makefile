@@ -10,6 +10,9 @@ brain-even:
 brain-calc:
 	uv run brain-calc
 
+brain-gcd:
+	uv run brain-gcd
+
 lint:
 	uv run ruff check brain_games
 
@@ -18,6 +21,3 @@ build:
 
 package-install:
 	uv tool install dist/*.whl
-
-demo-cast:
-	uv run python generate_asciinema_cast.py
