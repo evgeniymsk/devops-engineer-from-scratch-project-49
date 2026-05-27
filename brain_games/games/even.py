@@ -1,4 +1,4 @@
-import random
+import secrets
 
 GAME_RULES = (
     'Answer "yes" if the number is even, otherwise answer "no".'
@@ -8,8 +8,8 @@ MAX_NUMBER = 100
 
 
 def get_question():
-    number = random.randint(MIN_NUMBER, MAX_NUMBER)
-    return str(number)
+    number = secrets.randbelow(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER
+    return number
 
 
 def get_correct_answer(question):
