@@ -9,7 +9,7 @@ MAX_NUMBER = 100
 
 def get_question():
     number = secrets.randbelow(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER
-    return number
+    return str(number)
 
 
 def get_correct_answer(question):
