@@ -15,3 +15,6 @@ build:
 
 package-install:
 	uv tool install dist/*.whl
+
+demo-cast:
+	uv run python generate_asciinema_cast.py
