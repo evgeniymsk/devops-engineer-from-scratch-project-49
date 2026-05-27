@@ -26,4 +26,4 @@ build:
 	uv build
 
 package-install:
-	uv tool install ./dist/brain_games-0.1.0-py3-none-any.whl --force
+	uv tool install dist/*.whl
