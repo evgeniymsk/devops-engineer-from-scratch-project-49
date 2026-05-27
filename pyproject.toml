@@ -1,5 +1,5 @@
 [project]
-name = "brain-games"
+name = "hexlet-code"
 version = "0.1.0"
 description = "A set of console math games for brain training"
 readme = "README.md"
