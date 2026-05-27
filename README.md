@@ -27,7 +27,7 @@
 
 ## Минимальные требования
 
-- Python 3.14+
+- Python 3.13+
 - [uv](https://docs.astral.sh/uv/)
 - make (опционально, для команд из Makefile)
 
