@@ -15,7 +15,7 @@
 
 ### brain-even
 
-[![asciicast](https://asciinema.org/a/jndk79j4eUs1Tr98.svg)](https://asciinema.org/a/jndk79j4eUs1Tr98)
+[![asciicast](./asciinema/brain-even.svg)](https://asciinema.org/a/jndk79j4eUs1Tr98)
 
 #### Установка и запуск
 
