@@ -24,11 +24,18 @@
 ### brain-gcd
 [![asciicast](https://asciinema.org/a/yxwaxIzC1fskC9CW.svg)](https://asciinema.org/a/yxwaxIzC1fskC9CW)
 
+### brain-progression
+[![asciicast](https://asciinema.org/a/aD8rkvmvKoUpClAd.svg)](https://asciinema.org/a/aD8rkvmvKoUpClAd)
+
 #### Установка и запуск
 
 ```bash
 make install
+make lint
 make build
 make package-install
 brain-even
+brain-calc
+brain-gcd
+run brain-progression
 ```
