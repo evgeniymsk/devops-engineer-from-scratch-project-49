@@ -5,6 +5,7 @@ GAME_RULES = (
 )
 MIN_NUMBER = 1
 MAX_NUMBER = 100
+EVEN_DIVISOR = 2
 
 
 def get_question():
@@ -14,4 +15,4 @@ def get_question():
 
 def get_correct_answer(question):
     number = int(question)
-    return 'yes' if number % 2 == 0 else 'no'
+    return 'yes' if number % EVEN_DIVISOR == 0 else 'no'

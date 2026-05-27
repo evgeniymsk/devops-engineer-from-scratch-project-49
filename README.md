@@ -13,6 +13,52 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=EvgeniyMsk_devops-engineer-from-scratch-project-49&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=EvgeniyMsk_devops-engineer-from-scratch-project-49)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=EvgeniyMsk_devops-engineer-from-scratch-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=EvgeniyMsk_devops-engineer-from-scratch-project-49)
 
+## Brain Games
+
+Набор из пяти консольных математических игр. В каждой игре нужно дать три правильных ответа подряд. После трёх верных ответов игра завершается победой, при ошибке — поражением.
+
+Игры:
+
+- **brain-even** — проверка на чётность
+- **brain-calc** — вычисление выражения (`+`, `-`, `*`)
+- **brain-gcd** — наибольший общий делитель
+- **brain-progression** — пропущенное число в арифметической прогрессии
+- **brain-prime** — простое ли число
+
+## Минимальные требования
+
+- Python 3.14+
+- [uv](https://docs.astral.sh/uv/)
+- make (опционально, для команд из Makefile)
+
+## Установка и запуск
+
+```bash
+make install
+make lint
+make build
+make package-install
+```
+
+После `make package-install` команды доступны глобально (через `uv tool`):
+
+```bash
+brain-games
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
+
+Для разработки без установки пакета:
+
+```bash
+make brain-even
+```
+
+## Демонстрации (asciinema)
+
 ### brain-even
 
 [![asciicast](https://asciinema.org/a/jndk79j4eUs1Tr98.svg)](https://asciinema.org/a/jndk79j4eUs1Tr98)
@@ -22,23 +68,13 @@
 [![asciicast](https://asciinema.org/a/eaj2OzUrrQLOZejh.svg)](https://asciinema.org/a/eaj2OzUrrQLOZejh)
 
 ### brain-gcd
+
 [![asciicast](https://asciinema.org/a/yxwaxIzC1fskC9CW.svg)](https://asciinema.org/a/yxwaxIzC1fskC9CW)
 
 ### brain-progression
+
 [![asciicast](https://asciinema.org/a/aD8rkvmvKoUpClAd.svg)](https://asciinema.org/a/aD8rkvmvKoUpClAd)
 
 ### brain-prime
+
 [![asciicast](https://asciinema.org/a/KGjRmHVRnOU81kkG.svg)](https://asciinema.org/a/KGjRmHVRnOU81kkG)
-
-#### Установка и запуск
-
-```bash
-make install
-make lint
-make build
-make package-install
-brain-even
-brain-calc
-brain-gcd
-run brain-progression
-```

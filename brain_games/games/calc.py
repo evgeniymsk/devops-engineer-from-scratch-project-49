@@ -9,7 +9,7 @@ OPERATIONS = ('+', '-', '*')
 def get_question():
     operand1 = secrets.randbelow(MAX_OPERAND - MIN_OPERAND + 1) + MIN_OPERAND
     operand2 = secrets.randbelow(MAX_OPERAND - MIN_OPERAND + 1) + MIN_OPERAND
-    operation = OPERATIONS[secrets.randbelow(3)]
+    operation = OPERATIONS[secrets.randbelow(len(OPERATIONS))]
     match operation:
         case '+':
             return f'{operand1} + {operand2}'
