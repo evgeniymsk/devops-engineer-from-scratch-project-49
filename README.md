@@ -27,6 +27,9 @@
 ### brain-progression
 [![asciicast](https://asciinema.org/a/aD8rkvmvKoUpClAd.svg)](https://asciinema.org/a/aD8rkvmvKoUpClAd)
 
+### brain-prime
+[![asciicast](https://asciinema.org/a/KGjRmHVRnOU81kkG.svg)](https://asciinema.org/a/KGjRmHVRnOU81kkG)
+
 #### Установка и запуск
 
 ```bash
