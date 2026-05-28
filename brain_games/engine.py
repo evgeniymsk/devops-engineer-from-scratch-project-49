@@ -3,8 +3,15 @@ import prompt
 ROUNDS_COUNT = 3
 
 
-def play(game, game_rules, name):
-    print(game_rules)
+def run(game):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    play(game, name)
+
+
+def play(game, name):
+    print(game.GAME_RULES)
     for _ in range(ROUNDS_COUNT):
         question = game.get_question()
         print(f'Question: {question}')

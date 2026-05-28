@@ -5,28 +5,33 @@ MIN_OPERAND = 1
 MAX_OPERAND = 100
 OPERATIONS = ('+', '-', '*')
 
+_round = None
 
-def get_question():
+
+def generate_round():
     operand1 = secrets.randbelow(MAX_OPERAND - MIN_OPERAND + 1) + MIN_OPERAND
     operand2 = secrets.randbelow(MAX_OPERAND - MIN_OPERAND + 1) + MIN_OPERAND
     operation = OPERATIONS[secrets.randbelow(len(OPERATIONS))]
     match operation:
         case '+':
-            return f'{operand1} + {operand2}'
+            question = f'{operand1} + {operand2}'
+            correct_answer = str(operand1 + operand2)
         case '-':
-            return f'{max(operand1, operand2)} - {min(operand1, operand2)}'
+            larger_operand = max(operand1, operand2)
+            smaller_operand = min(operand1, operand2)
+            question = f'{larger_operand} - {smaller_operand}'
+            correct_answer = str(larger_operand - smaller_operand)
         case '*':
-            return f'{operand1} * {operand2}'
+            question = f'{operand1} * {operand2}'
+            correct_answer = str(operand1 * operand2)
+    return question, correct_answer
+
+
+def get_question():
+    global _round
+    _round = generate_round()
+    return _round[0]
 
 
 def get_correct_answer(question):
-    operand1, operation, operand2 = question.split()
-    operand1 = int(operand1)
-    operand2 = int(operand2)
-    match operation:
-        case '+':
-            return str(operand1 + operand2)
-        case '-':
-            return str(operand1 - operand2)
-        case '*':
-            return str(operand1 * operand2)
+    return _round[1]

@@ -1,14 +1,9 @@
-import prompt
-
-from brain_games.engine import play
+from brain_games.engine import run
 from brain_games.games import progression
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    play(progression, progression.GAME_RULES, name)
+    run(progression)
 
 
 if __name__ == '__main__':
