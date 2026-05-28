@@ -5,8 +5,6 @@ MIN_OPERAND = 1
 MAX_OPERAND = 100
 OPERATIONS = ('+', '-', '*')
 
-_round = None
-
 
 def generate_round():
     operand1 = secrets.randbelow(MAX_OPERAND - MIN_OPERAND + 1) + MIN_OPERAND
@@ -28,10 +26,12 @@ def generate_round():
 
 
 def get_question():
-    global _round
-    _round = generate_round()
-    return _round[0]
+    question, correct_answer = generate_round()
+    get_question.round = (question, correct_answer)
+    return question
 
 
 def get_correct_answer(question):
-    return _round[1]
+    stored_question, correct_answer = get_question.round
+    assert question == stored_question
+    return correct_answer
