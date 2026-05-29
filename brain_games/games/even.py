@@ -8,11 +8,8 @@ MAX_NUMBER = 100
 EVEN_DIVISOR = 2
 
 
-def get_question():
+def get_question_and_correct_answer():
     number = secrets.randbelow(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER
-    return str(number)
-
-
-def get_correct_answer(question):
-    number = int(question)
-    return 'yes' if number % EVEN_DIVISOR == 0 else 'no'
+    question = str(number)
+    correct_answer = 'yes' if number % EVEN_DIVISOR == 0 else 'no'
+    return question, correct_answer

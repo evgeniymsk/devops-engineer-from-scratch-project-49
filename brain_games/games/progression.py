@@ -13,13 +13,14 @@ def generate_progression(start, step, length):
     return [start + index * step for index in range(length)]
 
 
-def get_question():
+def get_question_and_correct_answer():
     length = secrets.randbelow(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH
     start = secrets.randbelow(MAX_START - MIN_START + 1) + MIN_START
     step = secrets.randbelow(MAX_STEP - MIN_STEP + 1) + MIN_STEP
     hidden_index = secrets.randbelow(length)
 
     progression = generate_progression(start, step, length)
+    correct_answer = str(progression[hidden_index])
 
     question_parts = []
     for index in range(length):
@@ -28,21 +29,5 @@ def get_question():
         else:
             question_parts.append(str(progression[index]))
 
-    return ' '.join(question_parts)
-
-
-def get_correct_answer(question):
-    parts = question.split()
-    hidden_index = parts.index('..')
-
-    numbers = []
-    for index, part in enumerate(parts):
-        if part != '..':
-            numbers.append((index, int(part)))
-
-    first_index, first_value = numbers[0]
-    second_index, second_value = numbers[1]
-    step = (second_value - first_value) // (second_index - first_index)
-    start = first_value - first_index * step
-
-    return str(start + hidden_index * step)
+    question = ' '.join(question_parts)
+    return question, correct_answer

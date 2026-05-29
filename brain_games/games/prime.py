@@ -20,11 +20,8 @@ def is_prime(number):
     return True
 
 
-def get_question():
+def get_question_and_correct_answer():
     number = secrets.randbelow(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER
-    return str(number)
-
-
-def get_correct_answer(question):
-    number = int(question)
-    return 'yes' if is_prime(number) else 'no'
+    question = str(number)
+    correct_answer = 'yes' if is_prime(number) else 'no'
+    return question, correct_answer
